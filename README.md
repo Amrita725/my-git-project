@@ -66,3 +66,22 @@ git remote -v
 git push  
 git pull
 ```
+#Few Command Explanation
+```
+- git remote -v  
+It shows which REMOTE repositories your local repo is connected to.  
+Output  
+origin  https://github.com/amritasingh/abc.git (fetch)  
+origin  https://github.com/amritasingh/abc.git (push)  
+
+Meaning:  
+Your local git folder is connected to a remote repo on GitHub  
+The nickname for that remote is origin  
+
+- git push -u origin main  
+origin is basically my remote repo, and main is the main branch.
+So,  
+“origin is the default remote alias that points to the GitHub repository.
+When we run git push origin main, we are pushing the local main branch to the main branch of the remote repository.”
+
+```
