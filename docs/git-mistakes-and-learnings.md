@@ -53,3 +53,39 @@ A directory is considered meaningful by Git only if it contains at least one fil
 To make a folder appear properly in GitHub, ensure the folder contains at least one file  
 Example: example/README.md  
 Or add a placeholder file: example/.gitkeep  
+
+---
+## Learning 3: Cannot push directly into a subfolder on GitHub
+
+### ❌ What I tried to do
+
+I wanted to push my code directly into a specific folder path inside my repository on GitHub: my-git-project/examples/project-1-simple-blog. To do this, I added the following remote URL, Then I tried to push my branch:
+
+```bash
+git remote add origin https://github.com/Amrita725/my-git-project/tree/main/examples/project-1-simple-blog
+git push -u origin feature-add-post
+```
+
+### ⚠️ What went wrong
+Git returned the following error and I could not push my changes to GitHub.
+```bash
+fatal: repository 'https://github.com/Amrita725/my-git-project/tree/main/examples/project-1-simple-blog/' not found
+```
+
+### 🔍 Why this happened
+GitHub does not allow pushing to a subfolder path inside a repository. The /tree/main/... URL is a browser URL, not a Git repository endpoint. Git can only push to the repository root. A Git remote must always point to a .git repository, not a folder
+
+### ✅ Correct approach
+Clone or initialize the repository at the root level:
+
+```bash
+git clone https://github.com/Amrita725/my-git-project.git
+cd my-git-project
+```
+
+### 🧩 Key takeaway
+GitHub does not allow pushing into subfolders.
+The repository root is the only push target.
+Folder structure must exist locally before pushing.
+Clone the repository.
+
