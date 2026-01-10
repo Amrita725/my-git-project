@@ -68,9 +68,34 @@ git pull
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Few Command Explanation
+#Basic Term Explanation
+
 ```
-- git remote -v  
+What is a Personal Access Token (PAT) ?
+A Personal Access Token (PAT) is a secure authentication mechanism provided by GitHub that is used instead of a GitHub password for Git operations such as git push and git pull.
+Instead of manually generating a PAT from the GitHub UI, the GitHub CLI (gh) was used to authenticate and configure access.
+brew install gh
+gh auth login
+During authentication:
+
+GitHub.com was selected
+
+HTTPS protocol was chosen
+
+Authentication was completed via browser login
+
+What is a Remote URL in Git?
+A remote URL tells your local Git repository:  
+“Where should I push my code?”  
+“From where should I pull updates?”
+So,  
+Local repo → your laptop  
+Remote repo → GitHub  
+
+What is origin in Git?
+It is not a command, not a branch, not a server — just a label. origin is the default name given to a remote repository.
+
+git remote -v  
 It shows which REMOTE repositories your local repo is connected to.  
 Output  
 origin  https://github.com/amritasingh/abc.git (fetch)  
