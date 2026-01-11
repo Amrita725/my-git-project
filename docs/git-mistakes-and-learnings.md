@@ -89,3 +89,39 @@ The repository root is the only push target.
 Folder structure must exist locally before pushing.
 Clone the repository.
 
+---
+
+## Learning 4: Push rejected because remote has existing commits
+### ❌ What happened
+
+When pushing my local `main` branch:
+
+```bash
+git push -u origin main
+```
+I received:
+```bash
+! [rejected] main -> main (fetch first)
+
+hint: You have divergent branches and need to specify how to reconcile them.
+fatal: Need to specify how to reconcile divergent branches.
+```
+### 🔍 Why this happened
+
+The GitHub repository already contained commits (README created via UI),but my local repository was initialized separately.This caused the local and remote branches to have different histories. Your local main and remote main (origin/main) both have commits
+
+### ✅ Correct fix
+Run this once:
+```bash
+git pull --no-rebase
+```
+
+This tells Git:
+“Merge remote changes into my local branch.”
+If Git opens an editor.Just save & close (default message is fine)
+
+After that, push normally
+```bash
+git push -u origin main
+```
+This will now work.
