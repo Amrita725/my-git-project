@@ -1,4 +1,4 @@
-#Git Learning Portfolio
+# Git Learning Portfolio
 
 This repository documents my hands-on learning and understanding of Git,
 covering both conceptual knowledge and practical workflows used in real projects.
@@ -11,7 +11,6 @@ covering both conceptual knowledge and practical workflows used in real projects
 ## Repository Structure
 - docs/ – Core Git concepts and explanations
 - examples/ – Practical Git setups and configurations
-- notes/ – Interview-focused summaries and revisions
 
 ## Topics Covered
 - Git basics and terminology
