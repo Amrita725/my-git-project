@@ -68,7 +68,8 @@ git merge <branch>     # Merge branch into current branch
 - **Remote URL**:  tells your local Git repository "Where should I push/pull my code?”  
 ```
 git remote -v                   # It shows which REMOTE repositories your local repo is connected to.  
-git remote add origin <url>     # Add a remote  
+git remote add origin <url>     # Add a remote
+git remote remove origin        # Remove a remote
 git push -u origin main         # Push the origin which is basically my remote repo, and main is the main branch.
 git pull origin main            # Pull changes from remote
 ```
