@@ -59,6 +59,7 @@ git branch             # List branches
 git branch <name>      # Create new branch
 git checkout <name>    # Switch to branch
 git checkout -b <name> # Create and switch to branch
+git branch -d <name>   # Remove a branch
 git merge <branch>     # Merge branch into current branch
 ```
 ## 5. Git Remote & Origin
