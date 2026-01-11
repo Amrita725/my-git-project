@@ -5,7 +5,7 @@ This project is a **mini HTML/CSS blog** to demonstrate Git branching and mergin
 
 ## Git Features Demonstrated
 
-- Initialize local repo: `git init`
+- Clone repo: `git clone https://github.com/Amrita725/my-git-project.git`
 - Create feature branch: `git checkout -b feature-add-post`
 - Commit changes in multiple steps:
   - `git commit -m "Add header section"`
